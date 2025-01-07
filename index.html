@@ -108,13 +108,7 @@
             <p>GreenTech Software is a forward-thinking technology company focused on delivering cutting-edge software solutions for businesses and individuals. Our team at GreenTech specializes in developing innovative applications, ranging from enterprise-level software systems to next-generation decentralized applications (DApps). We are committed to leveraging the latest technologies, such as Blockchain and Web3, to create impactful and efficient products for our clients.</p>
         </div>
     </section>
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2><i class="fas fa-envelope"></i> Contact</h2>
-            <p>You can reach me at: <a href="mailto:msharkawy005@gmail.com">msharkawy005@gmail.com</a></p>
-        </div>
-    </section>
+    
 
     <!-- Footer Section -->
     <footer>
@@ -122,82 +116,5 @@
             <p>&copy; 2025 Mahmoud Sharkawy | Fullstack Developer</p>
         </div>
     </footer>
-<script>// Event listener to open popup for each skill
-    const skillItems = document.querySelectorAll('.skill-item');
-    
-    const popupContainer = document.getElementById('popup-container');
-    const popupTitle = document.getElementById('popup-title');
-    const popupDescription = document.getElementById('popup-description');
-    const popupIcons = document.getElementById('popup-icons');
-    
-    const closePopup = () => {
-        popupContainer.style.display = 'none';
-    };
-    
-    const openPopup = (skill) => {
-        popupTitle.textContent = skill.name;
-        popupDescription.textContent = skill.description;
-        
-        // Clear previous icons
-        popupIcons.innerHTML = '';
-        
-        skill.icons.forEach(icon => {
-            const iconElement = document.createElement('i');
-            iconElement.className = `fab fa-${icon}`;
-            popupIcons.appendChild(iconElement);
-        });
-    
-        popupContainer.style.display = 'flex';
-    };
-    
-    // Add event listeners to skill items
-    skillItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const skillName = item.dataset.skill;
-            
-            // Define data for each skill
-            const skillsData = {
-                'React.js & Redux': {
-                    name: 'React.js & Redux',
-                    description: 'A JavaScript library for building user interfaces, paired with Redux for state management.',
-                    icons: ['react']
-                },
-                'Node.js & Express': {
-                    name: 'Node.js & Express',
-                    description: 'A runtime environment and framework for building server-side applications in JavaScript.',
-                    icons: ['node-js']
-                },
-                'CSS, SCSS, & Bootstrap': {
-                    name: 'CSS, SCSS, & Bootstrap',
-                    description: 'Styling frameworks and preprocessors for building responsive and elegant web designs.',
-                    icons: ['css3-alt']
-                },
-                'JavaScript & TypeScript': {
-                    name: 'JavaScript & TypeScript',
-                    description: 'Programming languages used for dynamic and type-safe web development.',
-                    icons: ['js-square']
-                },
-                'Laravel': {
-                    name: 'Laravel',
-                    description: 'A PHP framework for building powerful, secure, and scalable web applications.',
-                    icons: ['laravel']
-                },
-                'Blockchain & Smart Contracts': {
-                    name: 'Blockchain & Smart Contracts',
-                    description: 'Decentralized applications and automated processes running on blockchain technology.',
-                    icons: ['bitcoin']
-                },
-                'Web3 Development': {
-                    name: 'Web3 Development',
-                    description: 'Building decentralized applications (DApps) for the Web3 ecosystem.',
-                    icons: ['plug']
-                }
-            };
-    
-            const skill = skillsData[skillName];
-            openPopup(skill);
-        });
-    });
-    </script>
 </body>
 </html>
